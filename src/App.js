@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// React Hooks ----
+// useState
+import { useState, useEffect } from "react";
+function App(){
+  const [value,setvalue] = useState(0);
+  // function increase(){
+  //   // console.log(preValue);
+  //   setCount((test) => test + 1);
+  //   setCount((test) => test + 1);
+  // }
 
-function App() {
+  useEffect(() => {
+    console.log('learn useEffect funciton');
+  },[]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{value}</h1>
+      <button onClick={() =>setvalue(value+1) } style={{ padding:"0.5erm"}}>+</button>
     </div>
   );
+  
 }
 
 export default App;
